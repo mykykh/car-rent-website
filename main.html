@@ -12,7 +12,13 @@
         <header>
             <div class="logo"><h2>Logo</h2></div>
             <nav>
-                <button class="button mobile-nav-toggle">Menu</button>
+                <button class="mobile-nav-toggle" data-visible="false">
+                    <svg class="hamburger" width="25" height="25" viewBox="0 0 100 100">
+                        <rect class="hamburger-top" width="80" height="20" x="10" y="10" rx="5"/>
+                        <rect class="hamburger-middle" width="80" height="20" x="10" y="40" rx="5"/>
+                        <rect class="hamburger-bottom" width="80" height="20" x="10" y="70" rx="5"/>
+                    </svg>
+                </button>
                 <ul id="primary-navigation" data-visible="false">
                     <li>
                         <a class="link-white" href="#">Home</a>
@@ -35,69 +41,93 @@
             </nav>
         </header>
 
-        <main>
-            <div class="margin-2rem">
+        <main class="background-white padding-2rem">
+            <div>
                 <h1>Deals:</h1>
             </div>
             <div id="home-deals-cards-container">
-                <div class="width-50ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
-                    <div class="width-100">
-                        <h3>Title</h3>
-                    </div>
-                    <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
-                    <div class="width-100 flex flex-space-between">
-                        <h4>$100/Hour</h4>
-                        <form method="post">
-                            <input class="button" type="submit" value="Rent" />
-                        </form>
-                    </div>
-                </div>
-                <div class="width-50ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
-                    <div class="width-100">
-                        <h3>Title</h3>
-                    </div>
-                    <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
-                    <div class="width-100 flex flex-space-between">
-                        <h4>$100/Hour</h4>
-                        <form method="post">
-                            <input class="button" type="submit" value="Rent" />
-                        </form>
+                <div class="flex justify-content-center">
+                    <div class="width-25ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
+                        <div class="width-100">
+                            <h3>Title</h3>
+                        </div>
+                        <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
+                        <div class="width-100 flex flex-space-between">
+                            <h4>$100/Hour</h4>
+                            <form method="post">
+                                <input class="button" type="submit" value="Rent" />
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <div class="width-50ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
-                    <div class="width-100">
-                        <h3>Title</h3>
-                    </div>
-                    <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
-                    <div class="width-100 flex flex-space-between">
-                        <h4>$100/Hour</h4>
-                        <form method="post">
-                            <input class="button" type="submit" value="Rent" />
-                        </form>
-                    </div>
-                </div>
-                <div class="width-50ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
-                    <div class="width-100">
-                        <h3>Title</h3>
-                    </div>
-                    <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
-                    <div class="width-100 flex flex-space-between">
-                        <h4>$100/Hour</h4>
-                        <form method="post">
-                            <input class="button" type="submit" value="Rent" />
-                        </form>
+                <div class="flex justify-content-center">
+                    <div class="width-25ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
+                        <div class="width-100">
+                            <h3>Title</h3>
+                        </div>
+                        <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
+                        <div class="width-100 flex flex-space-between">
+                            <h4>$100/Hour</h4>
+                            <form method="post">
+                                <input class="button" type="submit" value="Rent" />
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <div class="width-50ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
-                    <div class="width-100">
-                        <h3>Title</h3>
+                <div class="flex justify-content-center">
+                    <div class="width-25ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
+                        <div class="width-100">
+                            <h3>Title</h3>
+                        </div>
+                        <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
+                        <div class="width-100 flex flex-space-between">
+                            <h4>$100/Hour</h4>
+                            <form method="post">
+                                <input class="button" type="submit" value="Rent" />
+                            </form>
+                        </div>
                     </div>
-                    <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
-                    <div class="width-100 flex flex-space-between">
-                        <h4>$100/Hour</h4>
-                        <form method="post">
-                            <input class="button" type="submit" value="Rent" />
-                        </form>
+                </div>
+                <div class="flex justify-content-center">
+                    <div class="width-25ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
+                        <div class="width-100">
+                            <h3>Title</h3>
+                        </div>
+                        <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
+                        <div class="width-100 flex flex-space-between">
+                            <h4>$100/Hour</h4>
+                            <form method="post">
+                                <input class="button" type="submit" value="Rent" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-content-center">
+                    <div class="width-25ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
+                        <div class="width-100">
+                            <h3>Title</h3>
+                        </div>
+                        <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
+                        <div class="width-100 flex flex-space-between">
+                            <h4>$100/Hour</h4>
+                            <form method="post">
+                                <input class="button" type="submit" value="Rent" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-content-center">
+                    <div class="width-25ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
+                        <div class="width-100">
+                            <h3>Title</h3>
+                        </div>
+                        <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
+                        <div class="width-100 flex flex-space-between">
+                            <h4>$100/Hour</h4>
+                            <form method="post">
+                                <input class="button" type="submit" value="Rent" />
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,7 +178,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-wrap flex-space-between">
+            <div id="footer-secondary-content-container">
                 <h5>2023 Auto Fast. All rights reserved</h5>
                 <div id="privacy-policy" class="flex">
                     <h5>Privacy & Policy</h5>

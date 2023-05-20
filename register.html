@@ -12,7 +12,13 @@
         <header>
             <div class="logo"><h2>Logo</h2></div>
             <nav>
-                <button class="button mobile-nav-toggle">Menu</button>
+                <button class="mobile-nav-toggle" data-visible="false">
+                    <svg class="hamburger" width="25" height="25" viewBox="0 0 100 100">
+                        <rect class="hamburger-top" width="80" height="20" x="10" y="10" rx="5"/>
+                        <rect class="hamburger-middle" width="80" height="20" x="10" y="40" rx="5"/>
+                        <rect class="hamburger-bottom" width="80" height="20" x="10" y="70" rx="5"/>
+                    </svg>
+                </button>
                 <ul id="primary-navigation" data-visible="false">
                     <li>
                         <a class="link-white" href="/#">Home</a>
@@ -29,17 +35,20 @@
                     <li>
                         <a class="link-white" href="/#comments-cards-container">Testimonial</a>
                     </li>
-                    <li>
-                        <a class="link-white" href="#">Register</a>
-                    </li>
-                    <li>
-                        <a class="button" href="login.html">Login</a>
-                    </li>
+                    <div class="flex flex-sm-column align-items-lm-center">
+                        <span class="vertical-line display-sm-none"></span>
+                        <li class="margin-lm-h-1rem margin-sm-b-1rem">
+                            <a class="link-white" href="#">Register</a>
+                        </li>
+                        <li>
+                            <a class="button" href="login.html">Login</a>
+                        </li>
+                    </div>
                 </ul>
             </nav>
         </header>
 
-        <main class="flex justify-content-center">
+        <main class="flex justify-content-center background-white">
             <div class="width-max-50ch flex flex-column align-items-center margin-2rem padding-2rem background-grey border-radius-1rem">
                 <div>
                     <h1>Register</h1>
@@ -114,7 +123,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-wrap flex-space-between">
+            <div id="footer-secondary-content-container">
                 <h5>2023 Auto Fast. All rights reserved</h5>
                 <div id="privacy-policy" class="flex">
                     <h5>Privacy & Policy</h5>

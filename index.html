@@ -11,7 +11,13 @@
         <header>
             <div class="logo"><h2>Logo</h2></div>
             <nav>
-                <button class="button mobile-nav-toggle">Menu</button>
+                <button class="mobile-nav-toggle" data-visible="false">
+                    <svg class="hamburger" width="25" height="25" viewBox="0 0 100 100">
+                        <rect class="hamburger-top" width="80" height="20" x="10" y="10" rx="5"/>
+                        <rect class="hamburger-middle" width="80" height="20" x="10" y="40" rx="5"/>
+                        <rect class="hamburger-bottom" width="80" height="20" x="10" y="70" rx="5"/>
+                    </svg>
+                </button>
                 <ul id="primary-navigation" data-visible="false">
                     <li>
                         <a class="link-white" href="#">Home</a>
@@ -28,12 +34,15 @@
                     <li>
                         <a class="link-white" href="#comments-cards-container">Testimonial</a>
                     </li>
-                    <li>
-                        <a class="link-white" href="register.html">Register</a>
-                    </li>
-                    <li>
-                        <a class="button" href="login.html">Login</a>
-                    </li>
+                    <div class="flex flex-sm-column align-items-lm-center">
+                        <span class="vertical-line display-sm-none"></span>
+                        <li class="margin-lm-h-1rem margin-sm-b-1rem">
+                            <a class="link-white" href="register.html">Register</a>
+                        </li>
+                        <li>
+                            <a class="button" href="login.html">Login</a>
+                        </li>
+                    </div>
                 </ul>
             </nav>
         </header>
@@ -107,7 +116,7 @@
                     </div>
                 </form>
             </section>
-            <section id="how-it-works-section">
+            <section id="how-it-works-section" class="background-white">
                 <div class="flex justify-content-center">
                     <div class="width-max-50ch flex flex-column align-items-center">
                         <h2 class="text-align-center">How it works</h2>
@@ -155,10 +164,18 @@
                     </p>
                 </div>
                 <div id="deals-type-selection">
-                    <h3>Popular</h3>
-                    <h3>Popular</h3>
-                    <h3>Popular</h3>
-                    <h3>Popular</h3>
+                    <div>
+                        <h3>Popular</h3>
+                    </div>
+                    <div>
+                        <h3>Popular</h3>
+                    </div>
+                    <div>
+                        <h3>Popular</h3>
+                    </div>
+                    <div>
+                        <h3>Popular</h3>
+                    </div>
                 </div>
                 <div id="car-cards-container">
                     <div class="car-card">
@@ -428,7 +445,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-wrap flex-space-between">
+            <div id="footer-secondary-content-container">
                 <h5>2023 Auto Fast. All rights reserved</h5>
                 <div id="privacy-policy" class="flex">
                     <h5>Privacy & Policy</h5>
