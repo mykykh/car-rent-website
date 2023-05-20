@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Car rent</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/menu-toggle.js" type="module"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo"><h2>Logo</h2></div>
+            <nav>
+                <button class="button mobile-nav-toggle">Menu</button>
+                <ul id="primary-navigation" data-visible="false">
+                    <li>
+                        <a class="link-white" href="#">Home</a>
+                    </li>
+                    <li>
+                        <a class="link-white" href="#how-it-works-section">How it works</a>
+                    </li>
+                    <li>
+                        <a class="link-white" href="#deals-section">Rental details</a>
+                    </li>
+                    <li>
+                        <a class="link-white" href="#why-choose-us-section">Why choose us</a>
+                    </li>
+                    <li>
+                        <a class="link-white" href="#comments-cards-container">Testimonial</a>
+                    </li>
+                    <li>
+                        <a class="link-white" href="#">Register</a>
+                    </li>
+                    <li>
+                        <a class="button" href="#">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="home-section" class="flex flex-wrap flex-space-between">
+                <div id="main-title" class="flex flex-column justify-content-center">
+                    <p>100% Trusted car rentel platform in the Bangladesh</p>
+                    <h1>Fast and easy way to rent a car</h1>
+                    <p>
+                        Our car rental online booking system designed to meet the specific
+                        needs of car rental busines owners. This easy-to-use car rental software
+                        will let you manage...
+                    </p>
+                    <div>
+                        <a class="button" href="#">Booking now</a>
+                        <a class="link-black" href="#">See all cars</a>
+                    </div>
+                </div>
+                <div id="main-image">
+                    <img src="images/main-image.jpg"/>
+                </div>
+            </section>
+            <section id="pick-up-section">
+                <form id="pick-up-card" class="flex flex-wrap flex-space-between align-items-center">
+                    <div>
+                        <h3>Pick-up</h3>
+                        <div class="flex flex-wrap flex-space-between">
+                            <div>
+                                <label for="location-pick-up">Location:</label>
+                                <br>
+                                <select name="location-pick-up">
+                                    <option value="test">Test</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="date-pick-up">Date:</label>
+                                <br>
+                                <input type="date" name="date-pick-up">
+                            </div>
+                            <div>
+                                <label for="time-pick-up">Time:</label>
+                                <br>
+                                <input type="time" name="time-pick-up">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Drop-off</h3>
+                        <div class="flex flex-wrap flex-space-between">
+                            <div>
+                                <label for="location-drop-off">Location:</label>
+                                <br>
+                                <select name="location-drop-off">
+                                    <option value="test">Test</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="date-drop-off">Date:</label>
+                                <br>
+                                <input type="date" name="date-drop-off">
+                            </div>
+                            <div>
+                                <label for="time-drop-off">Time:</label>
+                                <br>
+                                <input type="time" name="time-drop-off">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="search-pick-up" class="flex justify-content-center">
+                        <input class="button" type="submit" name="submit" value="Search">
+                    </div>
+                </form>
+            </section>
+            <section id="how-it-works-section">
+                <div class="flex justify-content-center">
+                    <div class="width-max-50ch flex flex-column align-items-center">
+                        <h2 class="text-align-center">How it works</h2>
+                        <p class="text-align-center">A heigh performing web-based car rental system for any rent-a-car company and website</p>
+                    </div>
+                </div>
+                <div class="how-it-works-cards-container flex">
+                    <div class="how-it-works-card flex flex-column align-items-center">
+                        <div class="large-icon-background">
+                            <img class="icon-image" src="images/location.svg" />
+                        </div>
+                        <div>
+                            <h3 class="text-align-center">Chose location</h3>
+                            <p class="text-align-center">Aliquam erat volutpat. Integer malesuada</p>
+                        </div>
+                    </div>
+                    <img class="how-it-works-line" src="images/curve_line.svg" />
+                    <div class="how-it-works-card flex flex-column align-items-center">
+                        <div class="large-icon-background">
+                            <img class="icon-image" src="images/location.svg" />
+                        </div>
+                        <div>
+                            <h3 class="text-align-center">Chose location</h3>
+                            <p class="text-align-center">Aliquam erat volutpat. Integer malesuada</p>
+                        </div>
+                    </div>
+                    <img class="how-it-works-line" src="images/curve_line.svg" />
+                    <div class="how-it-works-card flex flex-column align-items-center">
+                        <div class="large-icon-background">
+                            <img class="icon-image" src="images/location.svg" />
+                        </div>
+                        <div>
+                            <h3 class="text-align-center">Chose location</h3>
+                            <p class="text-align-center">Aliquam erat volutpat. Integer malesuada</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="deals-section" class="flex flex-column align-items-center justify-content-center">
+                <div id="deals-section-title" class="width-max-50ch flex flex-column align-items-center">
+                    <h2 class="text-align-center">Most popular car rental deals</h2>
+                    <p class="text-align-center">
+                    A high-performing web-based car rental system for any
+                    rent-a-car company and website
+                    </p>
+                </div>
+                <div id="deals-type-selection">
+                    <h3>Popular</h3>
+                    <h3>Popular</h3>
+                    <h3>Popular</h3>
+                    <h3>Popular</h3>
+                </div>
+                <div id="car-cards-container">
+                    <div class="car-card">
+                        <div>
+                            <h3>All New Rush</h3>
+                        </div>
+                        <img class="car-card-image" src="images/main-image.jpg" />
+                        <div class="flex flex-space-between align-items-center">
+                            <h4>$72.00/day</h4>
+                            <a class="button" href="#">Rent now</a>
+                        </div>
+                    </div>
+                    <div class="car-card">
+                        <div>
+                            <h3>All New Rush</h3>
+                        </div>
+                        <img class="car-card-image" src="images/main-image.jpg" />
+                        <div class="flex flex-space-between align-items-center">
+                            <h4>$72.00/day</h4>
+                            <a class="button" href="#">Rent now</a>
+                        </div>
+                    </div>
+                    <div class="car-card">
+                        <div>
+                            <h3>All New Rush</h3>
+                        </div>
+                        <img class="car-card-image" src="images/main-image.jpg" />
+                        <div class="flex flex-space-between align-items-center">
+                            <h4>$72.00/day</h4>
+                            <a class="button" href="#">Rent now</a>
+                        </div>
+                    </div>
+                    <div class="car-card">
+                        <div>
+                            <h3>All New Rush</h3>
+                        </div>
+                        <img class="car-card-image" src="images/main-image.jpg" />
+                        <div class="flex flex-space-between align-items-center">
+                            <h4>$72.00/day</h4>
+                            <a class="button" href="#">Rent now</a>
+                        </div>
+                    </div>
+                    <div class="car-card">
+                        <div>
+                            <h3>All New Rush</h3>
+                        </div>
+                        <img class="car-card-image" src="images/main-image.jpg" />
+                        <div class="flex flex-space-between align-items-center">
+                            <h4>$72.00/day</h4>
+                            <a class="button" href="#">Rent now</a>
+                        </div>
+                    </div>
+                    <div class="car-card">
+                        <div>
+                            <h3>All New Rush</h3>
+                        </div>
+                        <img class="car-card-image" src="images/main-image.jpg" />
+                        <div class="flex flex-space-between align-items-center">
+                            <h4>$72.00/day</h4>
+                            <a class="button" href="#">Rent now</a>
+                        </div>
+                    </div>
+                    <div class="car-card">
+                        <div>
+                            <h3>All New Rush</h3>
+                        </div>
+                        <img class="car-card-image" src="images/main-image.jpg" />
+                        <div class="flex flex-space-between align-items-center">
+                            <h4>$72.00/day</h4>
+                            <a class="button" href="#">Rent now</a>
+                        </div>
+                    </div>
+                    <div class="car-card">
+                        <div>
+                            <h3>All New Rush</h3>
+                        </div>
+                        <img class="car-card-image" src="images/main-image.jpg" />
+                        <div class="flex flex-space-between align-items-center">
+                            <h4>$72.00/day</h4>
+                            <a class="button" href="#">Rent now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-content-center align-items-center">
+                    <a class="button" href="#">Show more cars</a>
+                    <p id="number-of-cars">120 cars</p>
+                </div>
+            </section>
+            <section id="why-choose-us-section">
+                <div class="flex justify-content-center">
+                    <div class="width-max-50ch flex flex-column">
+                        <h2 class="text-align-center">Why choose us</h2>
+                        <p class="text-align-center">
+                        A high-performing web-based car rental system for any
+                        rent-a-car company and website
+                        </p>
+                    </div>
+                </div>
+                <div id="why-choose-us-content">
+                    <div class="width-100 flex justify-content-center">
+                        <img id="why-choose-us-image" src="images/main-image.jpg" />
+                    </div>
+                    <div id="why-choose-us-text">
+                        <div class="flex">
+                            <div class="small-icon-background">
+                                <img class="icon-image" src="images/location.svg" />
+                            </div>
+                            <div class="flex flex-column justify-content-center">
+                                <h3>Customer support</h3>
+                                <p>
+                                A high-performing web-based car rental system for any
+                                rent-a-car company and website
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="small-icon-background">
+                                <img class="icon-image" src="images/location.svg" />
+                            </div>
+                            <div class="flex flex-column justify-content-center">
+                                <h3>Customer support</h3>
+                                <p>
+                                A high-performing web-based car rental system for any
+                                rent-a-car company and website
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="small-icon-background">
+                                <img class="icon-image" src="images/location.svg" />
+                            </div>
+                            <div class="flex flex-column justify-content-center">
+                                <h3>Customer support</h3>
+                                <p>
+                                A high-performing web-based car rental system for any
+                                rent-a-car company and website
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="example-images">
+                <div class="width-100 flex justify-content-center">
+                    <img class="example-section-image" src="images/main-image.jpg" />
+                </div>
+                <div class="width-100 flex justify-content-center">
+                    <img class="example-section-image" src="images/main-image.jpg" />
+                </div>
+            </section>
+            <section id="testimonial-section">
+                <div class="flex justify-content-center">
+                    <div class="width-max-50ch flex flex-column">
+                        <h2 class="text-align-center">Trusted by thousands of happy customers</h2>
+                        <p class="text-align-center">
+                        A high-performing web-based car rental system for any
+                        rent-a-car company and website
+                        </p>
+                    </div>
+                </div>
+                <div id="comments-cards-container">
+                    <div class="flex width-100 justify-content-center">
+                        <div class="comment-card">
+                            <div class="comment-card-title">
+                                <div class="comment-card-title-image"></div>
+                                <div class="user-title-comment-card flex flex-column">
+                                    <h3>Viezh Robert</h3>
+                                    <p>Warsaw, Poland</p>
+                                </div>
+                            </div>
+                            <p>
+                            A high-performing web-based car rental system for any
+                            rent-a-car company and website
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex width-100 justify-content-center">
+                        <div class="comment-card">
+                            <div class="comment-card-title">
+                                <div class="comment-card-title-image"></div>
+                                <div class="user-title-comment-card flex flex-column">
+                                    <h3>Viezh Robert</h3>
+                                    <p>Warsaw, Poland</p>
+                                </div>
+                            </div>
+                            <p>
+                            A high-performing web-based car rental system for any
+                            rent-a-car company and website
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex width-100 justify-content-center">
+                        <div class="comment-card">
+                            <div class="comment-card-title">
+                                <div class="comment-card-title-image"></div>
+                                <div class="user-title-comment-card flex flex-column">
+                                    <h3>Viezh Robert</h3>
+                                    <p>Warsaw, Poland</p>
+                                </div>
+                            </div>
+                            <p>
+                            A high-performing web-based car rental system for any
+                            rent-a-car company and website
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex width-100 justify-content-center">
+                        <div class="comment-card">
+                            <div class="comment-card-title">
+                                <div class="comment-card-title-image"></div>
+                                <div class="user-title-comment-card flex flex-column">
+                                    <h3>Viezh Robert</h3>
+                                    <p>Warsaw, Poland</p>
+                                </div>
+                            </div>
+                            <p>
+                            A high-performing web-based car rental system for any
+                            rent-a-car company and website
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div id="footer-main-content-container">
+                <div id="footer-logo-section">
+                    <h2>Logo</h2>
+                    <p>
+                    Our vision is to provide convenience and help increase your 
+                    sales.
+                    </p>
+                </div>
+                <div id="footer-nav-section">
+                    <div class="flex justify-content-center">
+                        <div class="flex flex-column">
+                            <h3>About</h3>
+                            <ul>
+                                <li><a class="link-black" href="#">How it works</a></li>
+                                <li><a class="link-black" href="#">Featured</a></li>
+                                <li><a class="link-black" href="#">Partnership</a></li>
+                                <li><a class="link-black" href="#">Bussiness Relation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex justify-content-center">
+                        <div class="flex flex-column">
+                            <h3>Community</h3>
+                            <ul>
+                                <li><a class="link-black" href="#">How it works</a></li>
+                                <li><a class="link-black" href="#">Featured</a></li>
+                                <li><a class="link-black" href="#">Partnership</a></li>
+                                <li><a class="link-black" href="#">Bussiness Relation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex justify-content-center">
+                        <div class="flex flex-column">
+                            <h3>Socials</h3>
+                            <ul>
+                                <li><a class="link-black" href="#">How it works</a></li>
+                                <li><a class="link-black" href="#">Featured</a></li>
+                                <li><a class="link-black" href="#">Partnership</a></li>
+                                <li><a class="link-black" href="#">Bussiness Relation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-wrap flex-space-between">
+                <h5>2023 Auto Fast. All rights reserved</h5>
+                <div id="privacy-policy" class="flex">
+                    <h5>Privacy & Policy</h5>
+                    <h5>Terms & Condition</h5>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
