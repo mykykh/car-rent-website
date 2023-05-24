@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/menu-toggle.js" type="module"></script>
+    </head>
+    <body>
+
+        <header>
+            <div class="logo"><h2>Logo</h2></div>
+            <nav>
+                <button class="button mobile-nav-toggle">Menu</button>
+                <ul id="primary-navigation" data-visible="false">
+                    <li>
+                        <a class="link-white" href="/#">Home</a>
+                    </li>
+                    <li>
+                        <a class="link-white" href="/#how-it-works-section">How it works</a>
+                    </li>
+                    <li>
+                        <a class="link-white" href="/#deals-section">Rental details</a>
+                    </li>
+                    <li>
+                        <a class="link-white" href="/#why-choose-us-section">Why choose us</a>
+                    </li>
+                    <li>
+                        <a class="link-white" href="/#comments-cards-container">Testimonial</a>
+                    </li>
+                    <li>
+                        <a class="link-white" href="register.html">Register</a>
+                    </li>
+                    <li>
+                        <a class="button" href="#">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="flex justify-content-center">
+            <div class="width-max-50ch flex flex-column align-items-center margin-2rem padding-2rem background-grey border-radius-1rem">
+                <div>
+                    <h1>Login</h1>
+                    <form method="post">
+                        <div class="margin-v-1rem">
+                            <label for="username"><h2>Username:</h2></label>
+                            <input name="username" type="text" placeholder="username" required />
+                        </div>
+                        <div class="margin-v-1rem">
+                            <label for="password"><h2>Password:</h2></label>
+                            <input name="password" type="password" placeholder="password" required />
+                        </div>
+                        <div class="flex flex-space-between align-items-center">
+                            <a class="link-black" href="register.html">Register</a>
+                            <input class="button" type="submit" value="Login"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    
+        <footer>
+            <div id="footer-main-content-container">
+                <div id="footer-logo-section">
+                    <h2>Logo</h2>
+                    <p>
+                    Our vision is to provide convenience and help increase your 
+                    sales.
+                    </p>
+                </div>
+                <div id="footer-nav-section">
+                    <div class="flex justify-content-center">
+                        <div class="flex flex-column">
+                            <h3>About</h3>
+                            <ul>
+                                <li><a class="link-black" href="#">How it works</a></li>
+                                <li><a class="link-black" href="#">Featured</a></li>
+                                <li><a class="link-black" href="#">Partnership</a></li>
+                                <li><a class="link-black" href="#">Bussiness Relation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex justify-content-center">
+                        <div class="flex flex-column">
+                            <h3>Community</h3>
+                            <ul>
+                                <li><a class="link-black" href="#">How it works</a></li>
+                                <li><a class="link-black" href="#">Featured</a></li>
+                                <li><a class="link-black" href="#">Partnership</a></li>
+                                <li><a class="link-black" href="#">Bussiness Relation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex justify-content-center">
+                        <div class="flex flex-column">
+                            <h3>Socials</h3>
+                            <ul>
+                                <li><a class="link-black" href="#">How it works</a></li>
+                                <li><a class="link-black" href="#">Featured</a></li>
+                                <li><a class="link-black" href="#">Partnership</a></li>
+                                <li><a class="link-black" href="#">Bussiness Relation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-wrap flex-space-between">
+                <h5>2023 Auto Fast. All rights reserved</h5>
+                <div id="privacy-policy" class="flex">
+                    <h5>Privacy & Policy</h5>
+                    <h5>Terms & Condition</h5>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
