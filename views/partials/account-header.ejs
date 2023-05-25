@@ -1,0 +1,31 @@
+<header>
+    <div class="logo"><h2>Logo</h2></div>
+    <nav>
+        <button class="mobile-nav-toggle" data-visible="false">
+            <svg class="hamburger" width="25" height="25" viewBox="0 0 100 100">
+                <rect class="hamburger-top" width="80" height="20" x="10" y="10" rx="5"/>
+                <rect class="hamburger-middle" width="80" height="20" x="10" y="40" rx="5"/>
+                <rect class="hamburger-bottom" width="80" height="20" x="10" y="70" rx="5"/>
+            </svg>
+        </button>
+        <ul id="primary-navigation" data-visible="false">
+            <li>
+                <a class="link-white" href="#">Home</a>
+            </li>
+            <li>
+                <a class="link-white" href="#">Community</a>
+            </li>
+            <li>
+                <a class="link-white" href="#">History</a>
+            </li>
+            <li>
+                <a class="link-white" href="#">Account</a>
+            </li>
+            <li>
+                <form method="post" action="/auth/logout">
+                    <input class="button" type="submit" value="Log out" />
+                </form>
+            </li>
+        </ul>
+    </nav>
+</header>

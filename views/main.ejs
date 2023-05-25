@@ -4,42 +4,12 @@
         <title>Car rent</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-        <script src="js/menu-toggle.js" type="module"></script>
+        <link href="/css/style.css" rel="stylesheet">
+        <script src="/js/menu-toggle.js" type="module"></script>
     </head>
     <body>
 
-        <header>
-            <div class="logo"><h2>Logo</h2></div>
-            <nav>
-                <button class="mobile-nav-toggle" data-visible="false">
-                    <svg class="hamburger" width="25" height="25" viewBox="0 0 100 100">
-                        <rect class="hamburger-top" width="80" height="20" x="10" y="10" rx="5"/>
-                        <rect class="hamburger-middle" width="80" height="20" x="10" y="40" rx="5"/>
-                        <rect class="hamburger-bottom" width="80" height="20" x="10" y="70" rx="5"/>
-                    </svg>
-                </button>
-                <ul id="primary-navigation" data-visible="false">
-                    <li>
-                        <a class="link-white" href="#">Home</a>
-                    </li>
-                    <li>
-                        <a class="link-white" href="#">Community</a>
-                    </li>
-                    <li>
-                        <a class="link-white" href="#">History</a>
-                    </li>
-                    <li>
-                        <a class="link-white" href="#">Account</a>
-                    </li>
-                    <li>
-                        <form method="post" action="/logout">
-                            <input class="button" type="submit" value="Log out" />
-                        </form>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+        <%- include('partials/account-header') %>
 
         <main class="background-white padding-2rem">
             <div>
@@ -132,60 +102,8 @@
                 </div>
             </div>
         </main>
-    
-        <footer>
-            <div id="footer-main-content-container">
-                <div id="footer-logo-section">
-                    <h2>Logo</h2>
-                    <p>
-                    Our vision is to provide convenience and help increase your 
-                    sales.
-                    </p>
-                </div>
-                <div id="footer-nav-section">
-                    <div class="flex justify-content-center">
-                        <div class="flex flex-column">
-                            <h3>About</h3>
-                            <ul>
-                                <li><a class="link-black" href="#">How it works</a></li>
-                                <li><a class="link-black" href="#">Featured</a></li>
-                                <li><a class="link-black" href="#">Partnership</a></li>
-                                <li><a class="link-black" href="#">Bussiness Relation</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="flex justify-content-center">
-                        <div class="flex flex-column">
-                            <h3>Community</h3>
-                            <ul>
-                                <li><a class="link-black" href="#">How it works</a></li>
-                                <li><a class="link-black" href="#">Featured</a></li>
-                                <li><a class="link-black" href="#">Partnership</a></li>
-                                <li><a class="link-black" href="#">Bussiness Relation</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="flex justify-content-center">
-                        <div class="flex flex-column">
-                            <h3>Socials</h3>
-                            <ul>
-                                <li><a class="link-black" href="#">How it works</a></li>
-                                <li><a class="link-black" href="#">Featured</a></li>
-                                <li><a class="link-black" href="#">Partnership</a></li>
-                                <li><a class="link-black" href="#">Bussiness Relation</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="footer-secondary-content-container">
-                <h5>2023 Auto Fast. All rights reserved</h5>
-                <div id="privacy-policy" class="flex">
-                    <h5>Privacy & Policy</h5>
-                    <h5>Terms & Condition</h5>
-                </div>
-            </div>
-        </footer>
+
+        <%- include('partials/footer') %>
 
     </body>
 </html>
