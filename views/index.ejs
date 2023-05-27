@@ -6,6 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/css/style.css" rel="stylesheet">
         <script src="/js/menu-toggle.js" type="module"></script>
+        <style>
+            .car-button-active {
+                border-bottom: 3px solid var(--black) !important;
+            }
+        </style>
     </head>
     <body>
 
@@ -129,104 +134,78 @@
                     </p>
                 </div>
                 <div id="deals-type-selection">
-                    <div>
-                        <h3>Popular</h3>
+                    <div id="popular-car-button" class="car-button-active">
+                        <h3 class="text-align-center">Popular</h3>
                     </div>
-                    <div>
-                        <h3>Popular</h3>
+                    <div id="small-car-button">
+                        <h3 class="text-align-center">Small</h3>
                     </div>
-                    <div>
-                        <h3>Popular</h3>
+                    <div id="big-car-button">
+                        <h3 class="text-align-center">Big</h3>
                     </div>
-                    <div>
-                        <h3>Popular</h3>
+                    <div id="exclusive-car-button">
+                        <h3 class="text-align-center">Exclusive</h3>
                     </div>
                 </div>
-                <div id="car-cards-container">
+                <div class="car-cards-container popular-car">
+                    <% popular_cars.forEach((car) => { %>
                     <div class="car-card">
                         <div>
-                            <h3>All New Rush</h3>
+                            <h3><a href="/deal/<%= car.id %>" target="_blank" class="link-black"><%= car.title %></a></h3>
                         </div>
                         <img class="car-card-image" src="images/main-image.jpg" />
                         <div class="flex flex-space-between align-items-center">
-                            <h4>$72.00/day</h4>
+                            <h4>$<%= car.price %>/day</h4>
                             <a class="button" href="#">Rent now</a>
                         </div>
                     </div>
+                    <% }) %>
+                </div>
+                <div class="car-cards-container small-car display-none">
+                    <% small_cars.forEach((car) => { %>
                     <div class="car-card">
                         <div>
-                            <h3>All New Rush</h3>
+                            <h3><a href="/deal/<%= car.id %>" target="_blank" class="link-black"><%= car.title %></a></h3>
                         </div>
                         <img class="car-card-image" src="images/main-image.jpg" />
                         <div class="flex flex-space-between align-items-center">
-                            <h4>$72.00/day</h4>
+                            <h4>$<%= car.price %>/day</h4>
                             <a class="button" href="#">Rent now</a>
                         </div>
                     </div>
+                    <% }) %>
+                </div>
+                <div class="car-cards-container big-car display-none">
+                    <% big_cars.forEach((car) => { %>
                     <div class="car-card">
                         <div>
-                            <h3>All New Rush</h3>
+                            <h3><a href="/deal/<%= car.id %>" target="_blank" class="link-black"><%= car.title %></a></h3>
                         </div>
                         <img class="car-card-image" src="images/main-image.jpg" />
                         <div class="flex flex-space-between align-items-center">
-                            <h4>$72.00/day</h4>
+                            <h4>$<%= car.price %>/day</h4>
                             <a class="button" href="#">Rent now</a>
                         </div>
                     </div>
+                    <% }) %>
+                </div>
+                <div class="car-cards-container exclusive-car display-none">
+                    <% exclusive_cars.forEach((car) => { %>
                     <div class="car-card">
                         <div>
-                            <h3>All New Rush</h3>
+                            <h3><a href="/deal/<%= car.id %>" target="_blank" class="link-black"><%= car.title %></a></h3>
                         </div>
                         <img class="car-card-image" src="images/main-image.jpg" />
                         <div class="flex flex-space-between align-items-center">
-                            <h4>$72.00/day</h4>
+                            <h4>$<%= car.price %>/day</h4>
                             <a class="button" href="#">Rent now</a>
                         </div>
                     </div>
-                    <div class="car-card">
-                        <div>
-                            <h3>All New Rush</h3>
-                        </div>
-                        <img class="car-card-image" src="images/main-image.jpg" />
-                        <div class="flex flex-space-between align-items-center">
-                            <h4>$72.00/day</h4>
-                            <a class="button" href="#">Rent now</a>
-                        </div>
-                    </div>
-                    <div class="car-card">
-                        <div>
-                            <h3>All New Rush</h3>
-                        </div>
-                        <img class="car-card-image" src="images/main-image.jpg" />
-                        <div class="flex flex-space-between align-items-center">
-                            <h4>$72.00/day</h4>
-                            <a class="button" href="#">Rent now</a>
-                        </div>
-                    </div>
-                    <div class="car-card">
-                        <div>
-                            <h3>All New Rush</h3>
-                        </div>
-                        <img class="car-card-image" src="images/main-image.jpg" />
-                        <div class="flex flex-space-between align-items-center">
-                            <h4>$72.00/day</h4>
-                            <a class="button" href="#">Rent now</a>
-                        </div>
-                    </div>
-                    <div class="car-card">
-                        <div>
-                            <h3>All New Rush</h3>
-                        </div>
-                        <img class="car-card-image" src="images/main-image.jpg" />
-                        <div class="flex flex-space-between align-items-center">
-                            <h4>$72.00/day</h4>
-                            <a class="button" href="#">Rent now</a>
-                        </div>
-                    </div>
+                    <% }) %>
                 </div>
                 <div class="flex justify-content-center align-items-center">
                     <a class="button" href="#">Show more cars</a>
-                    <p id="number-of-cars">120 cars</p>
+                    <p id="number-of-cars"><%= car_count %> cars</p>
                 </div>
             </section>
             <section id="why-choose-us-section">
@@ -375,6 +354,81 @@
 
         <%- include('partials/footer') %>
 
+        <script>
+            const popular_btn = document.querySelector('#popular-car-button')
+            const small_btn = document.querySelector('#small-car-button')
+            const big_btn = document.querySelector('#big-car-button')
+            const exclusive_btn = document.querySelector('#exclusive-car-button')
+
+            const popular_cars = document.querySelectorAll('.popular-car')
+            const small_cars = document.querySelectorAll('.small-car')
+            const big_cars = document.querySelectorAll('.big-car')
+            const exclusive_cars = document.querySelectorAll('.exclusive-car')
+
+            popular_btn.addEventListener('click', () => {
+                makeActive(popular_btn)
+                makeInActive(small_btn)
+                makeInActive(big_btn)
+                makeInActive(exclusive_btn)
+                show(popular_cars)
+                hide(small_cars)
+                hide(big_cars)
+                hide(exclusive_cars)
+            })
+
+            small_btn.addEventListener('click', () => {
+                makeActive(small_btn)
+                makeInActive(popular_btn)
+                makeInActive(big_btn)
+                makeInActive(exclusive_btn)
+                show(small_cars)
+                hide(popular_cars)
+                hide(big_cars)
+                hide(exclusive_cars)
+            })
+
+            big_btn.addEventListener('click', () => {
+                makeActive(big_btn)
+                makeInActive(popular_btn)
+                makeInActive(small_btn)
+                makeInActive(exclusive_btn)
+                show(big_cars)
+                hide(popular_cars)
+                hide(small_cars)
+                hide(exclusive_cars)
+            })
+
+            exclusive_btn.addEventListener('click', () => {
+                makeActive(exclusive_btn)
+                makeInActive(popular_btn)
+                makeInActive(small_btn)
+                makeInActive(big_btn)
+                show(exclusive_cars)
+                hide(popular_cars)
+                hide(small_cars)
+                hide(big_cars)
+            })
+
+            function makeActive(button) {
+                button.classList.add('car-button-active')
+            }
+
+            function makeInActive(button) {
+                button.classList.remove('car-button-active')
+            }
+
+            function show(cards) {
+                cards.forEach((card) => {
+                    card.classList.remove('display-none')
+                })
+            }
+
+            function hide(cards) {
+                cards.forEach((card) => {
+                    card.classList.add('display-none')
+                })
+            }
+        </script>
         <script>
             const comments_container = document.querySelector('#comments-cards-container')
             const back_button = document.querySelector('#back-comment-button')

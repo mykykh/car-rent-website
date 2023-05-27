@@ -16,13 +16,15 @@ enum Role{
 }
 
 model User {
-  id        Int       @id @default(autoincrement())
-  username  String    @unique
-  email     String    @unique
-  password  String
-  role      Role      @default(USER)
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
+  id          Int       @id @default(autoincrement())
+  username    String    @unique
+  email       String    @unique
+  password    String
+  role        Role      @default(USER)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  createdCars Car[] @relation("CreatedCars")
+  rentedCars  RentedCarsOnUsers[]
 
   @@index([username], type: Hash)
   @@index([email], type: Hash)
@@ -34,4 +36,33 @@ model RefreshToken {
   createdAt DateTime  @default(now())
 
   @@index([token], type: Hash)
+}
+
+enum CarType{
+  SMALL
+  BIG
+  EXCLUSIVE
+}
+
+model Car {
+  id        Int @id @default(autoincrement())
+  title     String
+  price     Float
+  type      CarType @default(SMALL)
+  lessor    User @relation("CreatedCars", fields: [lessorId], references: [id])
+  lessorId  Int
+  rentors   RentedCarsOnUsers[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model RentedCarsOnUsers {
+  rentor      User @relation(fields: [rentorId], references: [id])
+  rentorId    Int
+  rentedCar   Car @relation(fields: [rentedCarId], references: [id])
+  rentedCarId Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@id([rentorId, rentedCarId])
 }

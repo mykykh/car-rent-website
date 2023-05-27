@@ -46,6 +46,10 @@ h5 {
     display: block;
 }
 
+.display-none {
+    display: none !important;
+}
+
 @media (width < 800px) {
     .display-sm-none {
         display: none;
@@ -520,7 +524,7 @@ div#main-image img {
     border-bottom: 3px solid var(--dark);
 }
 
-#car-cards-container {
+.car-cards-container {
     display: grid;
     justify-content: center;
     width: 100%;
@@ -557,25 +561,25 @@ div#main-image img {
 }
 
 @media (width < 600px) {
-    #car-cards-container > div:nth-child(n+4) {
+    .car-cards-container > div:nth-child(n+4) {
         display: none;
     }
 }
 
 @media (600px <= width < 1000px) {
-    #car-cards-container > div:nth-child(n+5) {
+    .car-cards-container > div:nth-child(n+5) {
         display: none;
     }
 }
 
 @media (1000px <= width < 1400px) {
-    #car-cards-container > div:nth-child(n+7) {
+    .car-cards-container > div:nth-child(n+7) {
         display: none;
     }
 }
 
 @media (1400px <= width) {
-    #car-cards-container > div:nth-child(n+9) {
+    .car-cards-container > div:nth-child(n+9) {
         display: none;
     }
 }
@@ -584,20 +588,20 @@ div#main-image img {
     #deals-type-selection {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    #car-cards-container {
+    .car-cards-container {
         grid-template-columns: repeat(2, calc(var(--car-card-width) + 2rem));
         column-gap: 5rem;
     }
 }
 
 @media (width >= 1000px) {
-    #car-cards-container {
+    .car-cards-container {
         grid-template-columns: repeat(3, calc(var(--car-card-width) + 2rem));
     }
 }
 
 @media (width >= 1400px) {
-    #car-cards-container {
+    .car-cards-container {
         grid-template-columns: repeat(4, calc(var(--car-card-width) + 2rem));
     }
 }

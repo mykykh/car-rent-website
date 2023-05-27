@@ -16,89 +16,37 @@
                 <h1>Deals:</h1>
             </div>
             <div id="home-deals-cards-container">
+                <% cars.forEach((car) => { %>
                 <div class="flex justify-content-center">
                     <div class="width-25ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
                         <div class="width-100">
-                            <h3>Title</h3>
+                            <h3><a class="link-black" href="/deal/<%= car.id %>" target="_blank"><%= car.title %></a></h3>
                         </div>
                         <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
                         <div class="width-100 flex flex-space-between">
-                            <h4>$100/Hour</h4>
+                            <h4><%= car.price %>/Day</h4>
                             <form method="post">
                                 <input class="button" type="submit" value="Rent" />
                             </form>
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-content-center">
-                    <div class="width-25ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
-                        <div class="width-100">
-                            <h3>Title</h3>
-                        </div>
-                        <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
-                        <div class="width-100 flex flex-space-between">
-                            <h4>$100/Hour</h4>
-                            <form method="post">
-                                <input class="button" type="submit" value="Rent" />
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-content-center">
-                    <div class="width-25ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
-                        <div class="width-100">
-                            <h3>Title</h3>
-                        </div>
-                        <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
-                        <div class="width-100 flex flex-space-between">
-                            <h4>$100/Hour</h4>
-                            <form method="post">
-                                <input class="button" type="submit" value="Rent" />
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-content-center">
-                    <div class="width-25ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
-                        <div class="width-100">
-                            <h3>Title</h3>
-                        </div>
-                        <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
-                        <div class="width-100 flex flex-space-between">
-                            <h4>$100/Hour</h4>
-                            <form method="post">
-                                <input class="button" type="submit" value="Rent" />
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-content-center">
-                    <div class="width-25ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
-                        <div class="width-100">
-                            <h3>Title</h3>
-                        </div>
-                        <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
-                        <div class="width-100 flex flex-space-between">
-                            <h4>$100/Hour</h4>
-                            <form method="post">
-                                <input class="button" type="submit" value="Rent" />
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-content-center">
-                    <div class="width-25ch height-30ch flex flex-column justify-content-center align-items-center padding-1rem background-grey border-radius-1rem">
-                        <div class="width-100">
-                            <h3>Title</h3>
-                        </div>
-                        <img class="display-block margin-v-1rem width-100 height-20ch object-fit-cover" src="images/main-image.jpg" />
-                        <div class="width-100 flex flex-space-between">
-                            <h4>$100/Hour</h4>
-                            <form method="post">
-                                <input class="button" type="submit" value="Rent" />
-                            </form>
-                        </div>
-                    </div>
+                <% }) %>
+            </div>
+            <div class="flex flex-space-between">
+                <div><%= car_count %> cars</div>
+                <div>
+                    <% if (cars[0].id - 8 >= 1) { %>
+                        <input class="button-black" onclick="location.href='/<%= cars[0].id - 8 %>'" type="submit" value="Back" />
+                    <% } else { %>
+                        <input class="button-black" type="submit" value="Back" disabled style="background: var(--grey)"/>
+                    <% } %>
+
+                    <% if (cars[0].id + 8 <= car_count) { %>
+                        <input class="button-black" onclick="location.href='/<%= cars[0].id + 8 %>'" type="submit" value="Next" />
+                    <% } else { %>
+                        <input class="button-black" type="submit" value="Next" disabled style="background: var(--grey)"/>
+                    <% } %>
                 </div>
             </div>
         </main>

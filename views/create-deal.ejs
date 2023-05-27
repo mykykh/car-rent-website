@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Create deal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/css/style.css" rel="stylesheet">
+        <script src="/js/menu-toggle.js" type="module"></script>
+    </head>
+    <body>
+
+        <%- include('partials/account-header') %>
+
+        <main class="flex justify-content-center background-white">
+            <div class="width-max-50ch flex flex-column align-items-center margin-2rem padding-2rem background-grey border-radius-1rem">
+                <div>
+                    <h1>Create deal</h1>
+                    <form method="post">
+                        <div class="margin-v-1rem">
+                            <label for="title"><h2>Title:</h2></label>
+                            <input name="title" type="text" placeholder="title" required />
+                        </div>
+                        <div class="margin-v-1rem">
+                            <label for="price"><h2>Price:</h2></label>
+                            <input name="price" type="number" min="0" step="0.01" placeholder="100" required />
+                        </div>
+                        <div class="margin-v-1rem">
+                            <label for="car_type"><h2>Type:</h2></label>
+                            <select name="car_type" required>
+                                <option>SMALL</option>
+                                <option>BIG</option>
+                                <option>EXCLUSIVE</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-space-between align-items-center">
+                            <input class="button" type="submit" value="Create"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <%- include('partials/footer') %>
+
+    </body>
+</html>

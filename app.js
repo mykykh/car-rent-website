@@ -68,5 +68,6 @@ app.use(async (req, res, next) => {
 
 app.use('/', require('./routes/main'))
 app.use('/auth/', require('./routes/auth'))
+app.use('/deal/', require('./routes/deals'))
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`))

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Create deal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/css/style.css" rel="stylesheet">
+        <script src="/js/menu-toggle.js" type="module"></script>
+    </head>
+    <body>
+
+        <%- include('partials/account-header') %>
+
+        <main class="flex justify-content-center background-white">
+            <div class="width-max-50ch flex flex-column align-items-center margin-2rem padding-2rem background-grey border-radius-1rem">
+                <div>
+                    <h1><%= car.title %></h1>
+                    <p><b>Price:</b> <%= car.price %></p>
+                    <p><b>Type:</b> <%= car.type %></p>
+                    <p><b>Created:</b> <%= car.createdAt %></p>
+                    <p><b>Updated:</b> <%= car.updatedAt %></p>
+                </div>
+            </div>
+        </main>
+
+        <%- include('partials/footer') %>
+
+    </body>
+</html>
