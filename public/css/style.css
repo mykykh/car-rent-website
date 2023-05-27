@@ -172,6 +172,22 @@ h5 {
     background: var(--grey);
 }
 
+.button-black {
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    border: none;
+    transition: background 0.5s;
+}
+
+.button-black:hover {
+    background: var(--dark);
+}
+
 input, select {
     background: var(--white);
     padding: 0.5rem 1rem;
@@ -654,6 +670,14 @@ div#main-image img {
 #comments-cards-container {
     display: grid;
     margin: 1rem 0;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+#comments-cards-container::-webkit-scrollbar {
+    display: none;
 }
 
 .comment-card {
@@ -661,39 +685,6 @@ div#main-image img {
     padding: 1rem 0.5rem;
     background: var(--background-dark);
     border-radius: 1rem;
-}
-
-@media (width < 600px) {
-    #comments-cards-container {
-        grid-template-columns: 1fr;
-    }
-    #comments-cards-container > div:nth-child(n+2){
-        display: none;
-    }
-}
-@media (600px <= width < 1000px) {
-    #comments-cards-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    #comments-cards-container > div:nth-child(n+3){
-        display: none;
-    }
-}
-@media (1000px <= width < 1400px) {
-    #comments-cards-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    #comments-cards-container > div:nth-child(n+4){
-        display: none;
-    }
-}
-@media (1400px <= width) {
-    #comments-cards-container {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    #comments-cards-container > div:nth-child(n+5){
-        display: none;
-    }
 }
 
 footer {

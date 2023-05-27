@@ -363,10 +363,35 @@
                         </div>
                     </div>
                 </div>
+                <div class="flex flex-space-between padding-2rem">
+                    <div></div>
+                    <div>
+                        <button id="back-comment-button" class="button-black">Back</button>
+                        <button id="next-comment-button" class="button-black">Next</button>
+                    </div>
+                </div>
             </section>
         </main>
 
         <%- include('partials/footer') %>
+
+        <script>
+            const comments_container = document.querySelector('#comments-cards-container')
+            const back_button = document.querySelector('#back-comment-button')
+            const next_button = document.querySelector('#next-comment-button')
+            const gap = 32
+
+            comments_container.scrollLeft = 0
+            comments_container.style.scrollBehavior = 'smooth'
+
+            back_button.addEventListener('click', () => {
+                comments_container.scrollLeft -= comments_container.firstElementChild.offsetWidth + gap
+            })
+
+            next_button.addEventListener('click', () => {
+                comments_container.scrollLeft += comments_container.firstElementChild.offsetWidth + gap
+            })
+        </script>
 
     </body>
 </html>
